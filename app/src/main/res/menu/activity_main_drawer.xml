@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_photo_library_black_24dp"
+            android:title="Gallery" />
+        <item
+            android:id="@+id/nav_contacts"
+            android:icon="@drawable/ic_call_black_24dp"
+            android:title="Contacts" />
+        <item
+            android:id="@+id/nav_direction"
+            android:icon="@drawable/ic_navigation_black_24dp"
+            android:title="Direction" />
+
+    </group>
+
+
+</menu>
