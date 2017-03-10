@@ -7,11 +7,16 @@
     android:orientation="vertical"
     tools:context="com.example.andorid.goonj.ListActivity">
     <ListView
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:id="@+id/listView"
+        android:scrollbars="none"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation ="vertical"
         android:background="@android:color/white"
         android:visibility="visible"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
         />
 </LinearLayout>

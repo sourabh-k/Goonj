@@ -7,499 +7,681 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.andorid.goonj.MainActivity"
-    tools:showIn="@layout/app_bar_main">
+    tools:showIn="@layout/app_bar_main"
+    android:background="@drawable/semitransparent_white">
+
+
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="match_parent"
+        android:scrollbars="none">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/technical"
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:background="#FF2196F3"
-
-                >
-
-                <RelativeLayout
-                    android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:src="@drawable/goonj2"
+                android:scaleType="fitCenter"
+                android:background="#fffdfd"/>
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"
+                android:text="Events"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:textColor="@android:color/white"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+            <FrameLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvtechnical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#FEFEFE"
+                app:cardCornerRadius="0dp"
+                android:elevation="10dp">
+                <LinearLayout
+                    android:id="@+id/technical"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp">
+                <ImageView
+                    android:id="@+id/techimgv"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="2">
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"/>
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_margin="8dp"
-                        android:background="@android:color/white"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/technical1" />
 
+
+
+            </RelativeLayout>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginBottom="10dp"
-                        android:gravity="center_horizontal"
-                        android:text="Technical Events"
-                        android:textColor="@android:color/white"
-                        android:textSize="28sp" />
-                </RelativeLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/technical_event1"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
+                        android:text="Technical"
+                        android:textSize="22sp"
                         android:gravity="center"
-                        android:text="Event 1"
-                        android:textColor="@android:color/black"
-                        android:textSize="23sp" />
-
-                    <TextView
-                        android:id="@+id/technical_event2"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
-                        android:gravity="center"
-                        android:text="Event 2"
-                        android:textColor="@android:color/black"
-                        android:textSize="23sp" />
+                        android:layout_margin="3dp"/>
                 </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/cultural"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:background="#FF009688">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/cultural_event1"
+            </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvtechnical2"
+                    android:layout_width="match_parent"
+                    android:layout_height="182dp"
+                    android:layout_margin="10dp"
+                    android:background="#FEFEFE"
+                    app:cardCornerRadius="0dp"
+                    android:elevation="10dp"
+                    android:visibility="gone">
+                    <LinearLayout
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
-                        android:gravity="center"
-                        android:text="Event 1"
-                        android:textColor="@android:color/black"
-                        android:textSize="23sp" />
-
-                    <TextView
-                        android:id="@+id/cultural_event2"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
-                        android:gravity="center"
-                        android:text="Event 2"
-                        android:textColor="@android:color/black"
-                        android:textSize="23sp" />
-                </LinearLayout>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="8dp"
-                        android:layout_weight="2"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/cultural" />
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/technical_event1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:background="@drawable/button_bg"
+                            android:gravity="center"
+                            android:text="Event 1"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@android:color/black"
+                            android:textSize="23sp" />
 
-                    <TextView
+                        <TextView
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:id="@+id/technical_event2"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_bg"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:text="Event 2"
+                            android:textColor="@android:color/black"
+                            android:textSize="23sp" />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:id="@+id/backtech"
+                            android:src="@drawable/back"
+                            android:background="@color/colorPrimary"
+                            android:scaleType="fitCenter"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </FrameLayout>
+
+            <!--Ends here-->
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#FEFEFE"
+                    app:cardCornerRadius="0dp"
+                    android:id="@+id/cvcultural"
+                    android:elevation="10dp">
+                    <LinearLayout
+                        android:id="@+id/cultural"
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginBottom="10dp"
-                        android:gravity="center_horizontal"
-                        android:text="Cultural Events"
-                        android:textColor="@android:color/white"
-                        android:textSize="28sp" />
-                </RelativeLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/literature"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:background="#FF2196F3">
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp">
+                            <ImageView
+                                android:scaleType="fitXY"
+                                android:layout_height="match_parent"
+                                android:layout_width="match_parent"
+                                android:id="@+id/cultimgv"
+                                android:layout_centerInParent="true"/>
+                        </RelativeLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cultural"
+                            android:textSize="22sp"
+                            android:layout_margin="3dp"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvcultural2"
+                    android:layout_width="match_parent"
+                    android:layout_height="182dp"
+                    android:layout_margin="10dp"
+                    android:background="#FEFEFE"
+                    app:cardCornerRadius="0dp"
+                    android:elevation="10dp"
+                    android:visibility="gone">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="8dp"
-                        android:layout_weight="2"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/literar" />
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/cultural_event1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:background="@drawable/button_bg"
+                            android:gravity="center"
+                            android:text="Event 1"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@android:color/black"
+                            android:textSize="23sp" />
 
-                    <TextView
+                        <TextView
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:id="@+id/cultural_event2"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_bg"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:text="Event 2"
+                            android:textColor="@android:color/black"
+                            android:textSize="23sp" />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:id="@+id/backcult"
+                            android:src="@drawable/back"
+                            android:background="@color/colorPrimary"
+                            android:scaleType="fitCenter"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </FrameLayout>
+
+            <!--Ends here-->
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <FrameLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:id="@+id/cvliterature"
+                    android:background="#FEFEFE"
+                    app:cardCornerRadius="0dp"
+                    android:elevation="10dp">
+                    <LinearLayout
+                        android:id="@+id/literature"
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginBottom="10dp"
-                        android:gravity="center_horizontal"
-                        android:text="Literature Events"
-                        android:textColor="@android:color/white"
-                        android:textSize="28sp" />
-                </RelativeLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/literature_event1"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:id="@+id/liteimgv"
+                                android:scaleType="fitXY"/>
+                        </RelativeLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Literature"
+                            android:textSize="22sp"
+                            android:layout_margin="3dp"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvliterature2"
+                    android:layout_width="match_parent"
+                    android:layout_height="182dp"
+                    android:layout_margin="10dp"
+                    android:background="#FEFEFE"
+                    app:cardCornerRadius="0dp"
+                    android:elevation="10dp"
+                    android:visibility="gone">
+                    <LinearLayout
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
-                        android:gravity="center"
-                        android:text="Event 1"
-                        android:textColor="@android:color/black"
-                        android:textSize="23sp" />
-
-                    <TextView
-                        android:id="@+id/literature_event2"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
-                        android:gravity="center"
-                        android:text="Event 2"
-                        android:textColor="@android:color/black"
-                        android:textSize="23sp" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/fine_arts"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:background="#FF009688">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/fine_arts_event1"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
-                        android:gravity="center"
-                        android:text="Event 1"
-                        android:textColor="@android:color/black"
-                        android:textSize="23sp" />
-
-                    <TextView
-                        android:id="@+id/fine_arts_event2"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
-                        android:gravity="center"
-                        android:text="Event 2"
-                        android:textColor="@android:color/black"
-                        android:textSize="23sp" />
-                </LinearLayout>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="8dp"
-                        android:layout_weight="2"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/fine_art1" />
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/literature_event1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:background="@drawable/button_bg"
+                            android:gravity="center"
+                            android:text="Event 1"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@android:color/black"
+                            android:textSize="23sp" />
 
-                    <TextView
+                        <TextView
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:id="@+id/literature_event2"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_bg"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:text="Event 2"
+                            android:textColor="@android:color/black"
+                            android:textSize="23sp" />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:id="@+id/backlite"
+                            android:src="@drawable/back"
+                            android:background="@color/colorPrimary"
+                            android:scaleType="fitCenter"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </FrameLayout>
+
+            <!--Ends here-->
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvtheatre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#FEFEFE"
+                    app:cardCornerRadius="0dp"
+                    android:elevation="10dp">
+                    <LinearLayout
+                        android:id="@+id/theatre"
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginBottom="10dp"
-                        android:gravity="center_horizontal"
-                        android:text="Fine Arts Events"
-                        android:textColor="@android:color/white"
-                        android:textSize="28sp" />
-                </RelativeLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/fun"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:background="#FF2196F3">
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/theaimgv"
+                                android:layout_centerInParent="true"
+                                android:scaleType="fitXY"/>
+                        </RelativeLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Theatre"
+                            android:textSize="22sp"
+                            android:gravity="center"
+                            android:layout_margin="3dp"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvtheatre2"
+                    android:layout_width="match_parent"
+                    android:layout_height="182dp"
+                    android:layout_margin="10dp"
+                    android:background="#FEFEFE"
+                    app:cardCornerRadius="0dp"
+                    android:elevation="10dp"
+                    android:visibility="gone">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="8dp"
-                        android:layout_weight="2"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/fun" />
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/theatre_event1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:background="@drawable/button_bg"
+                            android:gravity="center"
+                            android:text="Event 1"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@android:color/black"
+                            android:textSize="23sp" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginBottom="10dp"
-                        android:gravity="center_horizontal"
-                        android:text="Fun Events"
-                        android:textColor="@android:color/white"
-                        android:textSize="28sp" />
-                </RelativeLayout>
+                        <TextView
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:id="@+id/theatre_event2"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_bg"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:text="Event 2"
+                            android:textColor="@android:color/black"
+                            android:textSize="23sp" />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:id="@+id/backthea"
+                            android:src="@drawable/back"
+                            android:background="@color/colorPrimary"
+                            android:scaleType="fitCenter"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </FrameLayout>
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+        </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/fun_event1"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
-                        android:gravity="center"
-                        android:text="Event 1"
-                        android:textColor="@android:color/black"
-                        android:textSize="23sp" />
-
-                    <TextView
-                        android:id="@+id/fun_event2"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
-                        android:gravity="center"
-                        android:text="Event 2"
-                        android:textColor="@android:color/black"
-                        android:textSize="23sp" />
-                </LinearLayout>
-
-            </LinearLayout>
-
+            <!--Ends Here-->
             <LinearLayout
-                android:id="@+id/sports"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:background="#FF009688">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/sports_event1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+            <FrameLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvfun"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#FEFEFE"
+                    app:cardCornerRadius="0dp"
+                    android:elevation="10dp">
+                    <LinearLayout
+                        android:id="@+id/fun"
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
-                        android:gravity="center"
-                        android:text="Event 1"
-                        android:textColor="@android:color/black"
-                        android:textSize="23sp" />
-
-                    <TextView
-                        android:id="@+id/sports_event2"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY"
+                                android:layout_centerInParent="true"
+                                android:id="@+id/funimgv"/>
+                        </RelativeLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Fun"
+                                android:textSize="22sp"
+                                android:gravity="center"
+                                android:layout_margin="3dp"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvfun2"
+                    android:layout_width="match_parent"
+                    android:layout_height="182dp"
+                    android:layout_margin="10dp"
+                    android:background="#FEFEFE"
+                    app:cardCornerRadius="0dp"
+                    android:elevation="10dp"
+                    android:visibility="gone">
+                    <LinearLayout
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
-                        android:gravity="center"
-                        android:text="Event 2"
-                        android:textColor="@android:color/black"
-                        android:textSize="23sp" />
-                </LinearLayout>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_margin="8dp"
-                        android:layout_weight="2"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/sports" />
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/fun_event1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:background="@drawable/button_bg"
+                            android:gravity="center"
+                            android:text="Event 1"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@android:color/black"
+                            android:textSize="23sp" />
 
-                    <TextView
+                        <TextView
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:id="@+id/fun_event2"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_bg"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:text="Event 2"
+                            android:textColor="@android:color/black"
+                            android:textSize="23sp" />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:id="@+id/backfun"
+                            android:src="@drawable/back"
+                            android:background="@color/colorPrimary"
+                            android:scaleType="fitCenter"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </FrameLayout>
+
+
+            <!--Ends here-->
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvsports"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#FEFEFE"
+                    app:cardCornerRadius="0dp"
+                    android:elevation="10dp">
+                    <LinearLayout
+                        android:id="@+id/sports"
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginBottom="10dp"
-                        android:gravity="center_horizontal"
-                        android:text="Sports Events"
-                        android:textColor="@android:color/black"
-                        android:textSize="28sp" />
-                </RelativeLayout>
-            </LinearLayout>
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:id="@+id/sporimgv"
+                                android:scaleType="fitXY"/>
+                        </RelativeLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sports"
+                            android:textSize="22sp"
+                            android:gravity="center"
+                            android:layout_margin="3dp"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvsports2"
+                    android:layout_width="match_parent"
+                    android:layout_height="182dp"
+                    android:layout_margin="10dp"
+                    android:background="#FEFEFE"
+                    app:cardCornerRadius="0dp"
+                    android:elevation="10dp"
+                    android:visibility="gone">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/sports_event1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:background="@drawable/button_bg"
+                            android:gravity="center"
+                            android:text="Event 1"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@android:color/black"
+                            android:textSize="23sp" />
 
-            <LinearLayout
-                android:id="@+id/theatre"
+                        <TextView
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:id="@+id/sports_event2"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_bg"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:text="Event 2"
+                            android:textColor="@android:color/black"
+                            android:textSize="23sp" />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:id="@+id/backsports"
+                            android:src="@drawable/back"
+                            android:background="@color/colorPrimary"
+                            android:scaleType="fitCenter"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </FrameLayout>
+</LinearLayout>
+            <!--Ends here-->
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:background="#FF2196F3">
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#FEFEFE"
+                    app:cardCornerRadius="0dp"
+                    android:id="@+id/cvfinearts"
+                    android:elevation="10dp">
+                    <LinearLayout
+                        android:id="@+id/fine_arts"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/fineimgv"
+                                android:scaleType="fitXY"/>
+                        </RelativeLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Fine Arts"
+                            android:textSize="22sp"
+                            android:gravity="center"
+                            android:layout_margin="3dp"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvfinearts2"
+                    android:layout_width="match_parent"
+                    android:layout_height="182dp"
+                    android:layout_margin="10dp"
+                    android:background="#FEFEFE"
+                    app:cardCornerRadius="0dp"
+                    android:elevation="10dp"
+                    android:visibility="gone">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="8dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/theatre" />
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/fine_arts_event1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:background="@drawable/button_bg"
+                            android:gravity="center"
+                            android:text="Event 1"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@android:color/black"
+                            android:textSize="23sp" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginBottom="10dp"
-                        android:gravity="center_horizontal"
-                        android:text="Theatre Events"
-                        android:textColor="@android:color/white"
-                        android:textSize="28sp" />
-                </RelativeLayout>
+                        <TextView
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:id="@+id/fine_arts_event2"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_bg"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:text="Event 2"
+                            android:textColor="@android:color/black"
+                            android:textSize="23sp" />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:id="@+id/backfinearts"
+                            android:src="@drawable/back"
+                            android:background="@color/colorPrimary"
+                            android:scaleType="fitCenter"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </FrameLayout>
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/theatre_event1"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
-                        android:gravity="center"
-                        android:text="Event 1"
-                        android:textColor="@android:color/black"
-                        android:textSize="23sp" />
-
-                    <TextView
-                        android:id="@+id/theatre_event2"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
-                        android:gravity="center"
-                        android:text="Event 2"
-                        android:textColor="@android:color/black"
-                        android:textSize="23sp" />
-                </LinearLayout>
-            </LinearLayout>
         </LinearLayout>
     </ScrollView>
  <LinearLayout
