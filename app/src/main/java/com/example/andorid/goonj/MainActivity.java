@@ -12,10 +12,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AbsListView;
 import android.widget.AdapterView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
@@ -38,38 +37,19 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);*/
 
 
-        LinearLayout technical = (LinearLayout) findViewById(R.id.technical);
+        RelativeLayout technical = (RelativeLayout) findViewById(R.id.technical);
         technical.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               final LinearLayout miniScreen= (LinearLayout) findViewById(R.id.miniscreen);
-                miniScreen.setVisibility(View.VISIBLE);
                 loadDataToList(1);
-                View temp = (View) findViewById(R.id.view);
-                temp.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        miniScreen.setVisibility(View.GONE);
-                    }
-                });
-
             }
         });
 
-        LinearLayout cultural = (LinearLayout) findViewById(R.id.cultural);
+        RelativeLayout cultural = (RelativeLayout) findViewById(R.id.cultural);
         cultural.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final LinearLayout miniScreen= (LinearLayout) findViewById(R.id.miniscreen);
-                miniScreen.setVisibility(View.VISIBLE);
                 loadDataToList(2);
-                View temp = (View) findViewById(R.id.view);
-                temp.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        miniScreen.setVisibility(View.GONE);
-                    }
-                });
             }
         });
 
@@ -84,6 +64,12 @@ public class MainActivity extends AppCompatActivity
         listView.setAdapter(listAdapter);
         //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, data);
         //listView.setAdapter(adapter);
+        Bundle bd= new Bundle();
+        bd.putInt(getResources().getString(R.string.event_class),eventClass);
+        Intent intent = new Intent(getApplicationContext(),ListActivity.class);
+        intent.putExtra(getResources().getString(R.string.extra_data),bd);
+        startActivity(intent);
+        Log.i("SCROLLING DOWN","TRUE");
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
@@ -101,32 +87,7 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
-        listView.setOnScrollListener(new AbsListView.OnScrollListener() {
-            private int mLastFirstVisibleItem;
-            @Override
-            public void onScrollStateChanged(AbsListView absListView, int i) {
 
-            }
-
-            @Override
-            public void onScroll(AbsListView absListView, int i, int i1, int i2) {
-                if(mLastFirstVisibleItem<i)
-                {
-                    Bundle bd= new Bundle();
-                    bd.putInt(getResources().getString(R.string.event_class),eventClass);
-                    Intent intent = new Intent(getApplicationContext(),ListActivity.class);
-                    intent.putExtra(getResources().getString(R.string.extra_data),bd);
-                    startActivity(intent);
-                    Log.i("SCROLLING DOWN","TRUE");
-                }
-                if(mLastFirstVisibleItem>i)
-                {
-
-                    Log.i("SCROLLING UP","TRUE");
-                }
-                mLastFirstVisibleItem=i;
-            }
-        });
     }
     @Override
     public void onBackPressed() {

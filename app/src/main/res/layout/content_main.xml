@@ -9,497 +9,565 @@
     tools:context="com.example.andorid.goonj.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#800000FF"
+        android:text="Events"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:textColor="@android:color/white"/>
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/scrollView"
+        android:layout_below="@id/title"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
-            <LinearLayout
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#FEFEFE"
+                app:cardCornerRadius="0dp"
+                android:elevation="10dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+            <RelativeLayout
                 android:id="@+id/technical"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:background="#FF2196F3"
-
-                >
-
-                <RelativeLayout
-                    android:layout_width="0dp"
+                android:layout_height="170dp">
+                <ImageView
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="2">
+                    android:src="@drawable/technical1"
+                    android:scaleType="fitXY"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:hapticFeedbackEnabled="true"
+                    android:background="#80000000"
+                    android:gravity="center"
+                    android:text="Technical"
+                    android:textColor="@android:color/white"
+                    android:textSize="30sp" />
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_margin="8dp"
-                        android:background="@android:color/white"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/technical1" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginBottom="10dp"
-                        android:gravity="center_horizontal"
-                        android:text="Technical Events"
-                        android:textColor="@android:color/white"
-                        android:textSize="28sp" />
-                </RelativeLayout>
 
+            </RelativeLayout>
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
                     <TextView
                         android:id="@+id/technical_event1"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:background="@android:color/white"
+                        android:clickable="true"
+                        android:background="@drawable/button_bg"
                         android:gravity="center"
                         android:text="Event 1"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
                         android:textColor="@android:color/black"
                         android:textSize="23sp" />
-
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#0D000000"/>
                     <TextView
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
                         android:id="@+id/technical_event2"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
-                        android:gravity="center"
-                        android:text="Event 2"
-                        android:textColor="@android:color/black"
-                        android:textSize="23sp" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/cultural"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:background="#FF009688">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/cultural_event1"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
-                        android:gravity="center"
-                        android:text="Event 1"
-                        android:textColor="@android:color/black"
-                        android:textSize="23sp" />
-
-                    <TextView
-                        android:id="@+id/cultural_event2"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
-                        android:gravity="center"
-                        android:text="Event 2"
-                        android:textColor="@android:color/black"
-                        android:textSize="23sp" />
-                </LinearLayout>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2">
-
-                    <ImageView
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_margin="8dp"
-                        android:layout_weight="2"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/cultural" />
-
-                    <TextView
-                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginBottom="10dp"
-                        android:gravity="center_horizontal"
-                        android:text="Cultural Events"
-                        android:textColor="@android:color/white"
-                        android:textSize="28sp" />
-                </RelativeLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/literature"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:background="#FF2196F3">
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_margin="8dp"
-                        android:layout_weight="2"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/literar" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginBottom="10dp"
-                        android:gravity="center_horizontal"
-                        android:text="Literature Events"
-                        android:textColor="@android:color/white"
-                        android:textSize="28sp" />
-                </RelativeLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/literature_event1"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginTop="8dp"
                         android:layout_weight="1"
-                        android:background="@android:color/white"
+                        android:background="@drawable/button_bg"
                         android:gravity="center"
-                        android:text="Event 1"
-                        android:textColor="@android:color/black"
-                        android:textSize="23sp" />
-
-                    <TextView
-                        android:id="@+id/literature_event2"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
-                        android:gravity="center"
+                        android:clickable="true"
                         android:text="Event 2"
                         android:textColor="@android:color/black"
                         android:textSize="23sp" />
+                    </LinearLayout>
                 </LinearLayout>
+            </android.support.v7.widget.CardView>
+            </FrameLayout>
 
-            </LinearLayout>
+            <!--Ends here-->
 
-            <LinearLayout
-                android:id="@+id/fine_arts"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:background="#FF009688">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/fine_arts_event1"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#FEFEFE"
+                    app:cardCornerRadius="0dp"
+                    android:elevation="10dp">
+                    <LinearLayout
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
-                        android:gravity="center"
-                        android:text="Event 1"
-                        android:textColor="@android:color/black"
-                        android:textSize="23sp" />
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:id="@+id/cultural"
+                            android:layout_width="match_parent"
+                            android:layout_height="170dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/cultural"
+                                android:scaleType="fitXY"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:hapticFeedbackEnabled="true"
+                                android:background="#80000000"
+                                android:gravity="center"
+                                android:text="Cultural"
+                                android:textColor="@android:color/white"
+                                android:textSize="30sp" />
 
-                    <TextView
-                        android:id="@+id/fine_arts_event2"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
-                        android:gravity="center"
-                        android:text="Event 2"
-                        android:textColor="@android:color/black"
-                        android:textSize="23sp" />
-                </LinearLayout>
 
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2">
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_margin="8dp"
-                        android:layout_weight="2"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/fine_art1" />
+                        </RelativeLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/cultural_event1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:background="@drawable/button_bg"
+                                android:gravity="center"
+                                android:text="Event 1"
+                                android:paddingBottom="8dp"
+                                android:paddingTop="8dp"
+                                android:textColor="@android:color/black"
+                                android:textSize="23sp" />
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="#0D000000"/>
+                            <TextView
+                                android:paddingBottom="8dp"
+                                android:paddingTop="8dp"
+                                android:id="@+id/cultural_event2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/button_bg"
+                                android:gravity="center"
+                                android:clickable="true"
+                                android:text="Event 2"
+                                android:textColor="@android:color/black"
+                                android:textSize="23sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </FrameLayout>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginBottom="10dp"
-                        android:gravity="center_horizontal"
-                        android:text="Fine Arts Events"
-                        android:textColor="@android:color/white"
-                        android:textSize="28sp" />
-                </RelativeLayout>
+            <!--Ends here-->
 
-            </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/fun"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:background="#FF2196F3">
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_margin="8dp"
-                        android:layout_weight="2"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/fun" />
-
-                    <TextView
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#FEFEFE"
+                    app:cardCornerRadius="0dp"
+                    android:elevation="10dp">
+                    <LinearLayout
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginBottom="10dp"
-                        android:gravity="center_horizontal"
-                        android:text="Fun Events"
-                        android:textColor="@android:color/white"
-                        android:textSize="28sp" />
-                </RelativeLayout>
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:id="@+id/literature"
+                            android:layout_width="match_parent"
+                            android:layout_height="170dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/literar"
+                                android:scaleType="fitXY"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:hapticFeedbackEnabled="true"
+                                android:background="#80000000"
+                                android:gravity="center"
+                                android:text="Literature"
+                                android:textColor="@android:color/white"
+                                android:textSize="30sp" />
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/fun_event1"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
-                        android:gravity="center"
-                        android:text="Event 1"
-                        android:textColor="@android:color/black"
-                        android:textSize="23sp" />
 
-                    <TextView
-                        android:id="@+id/fun_event2"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
-                        android:gravity="center"
-                        android:text="Event 2"
-                        android:textColor="@android:color/black"
-                        android:textSize="23sp" />
-                </LinearLayout>
+                        </RelativeLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/literature_event1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:background="@drawable/button_bg"
+                                android:gravity="center"
+                                android:text="Event 1"
+                                android:paddingBottom="8dp"
+                                android:paddingTop="8dp"
+                                android:textColor="@android:color/black"
+                                android:textSize="23sp" />
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="#0D000000"/>
+                            <TextView
+                                android:paddingBottom="8dp"
+                                android:paddingTop="8dp"
+                                android:id="@+id/literature_event2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/button_bg"
+                                android:gravity="center"
+                                android:clickable="true"
+                                android:text="Event 2"
+                                android:textColor="@android:color/black"
+                                android:textSize="23sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </FrameLayout>
 
-            </LinearLayout>
+            <!--Ends here-->
 
-            <LinearLayout
-                android:id="@+id/sports"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:background="#FF009688">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/sports_event1"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#FEFEFE"
+                    app:cardCornerRadius="0dp"
+                    android:elevation="10dp">
+                    <LinearLayout
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
-                        android:gravity="center"
-                        android:text="Event 1"
-                        android:textColor="@android:color/black"
-                        android:textSize="23sp" />
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:id="@+id/fine_arts"
+                            android:layout_width="match_parent"
+                            android:layout_height="170dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/fine_art1"
+                                android:scaleType="fitXY"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:hapticFeedbackEnabled="true"
+                                android:background="#80000000"
+                                android:gravity="center"
+                                android:text="Fine Arts"
+                                android:textColor="@android:color/white"
+                                android:textSize="30sp" />
 
-                    <TextView
-                        android:id="@+id/sports_event2"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
-                        android:gravity="center"
-                        android:text="Event 2"
-                        android:textColor="@android:color/black"
-                        android:textSize="23sp" />
-                </LinearLayout>
 
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2">
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_margin="8dp"
-                        android:layout_weight="2"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/sports" />
+                        </RelativeLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/fine_arts_event1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:background="@drawable/button_bg"
+                                android:gravity="center"
+                                android:text="Event 1"
+                                android:paddingBottom="8dp"
+                                android:paddingTop="8dp"
+                                android:textColor="@android:color/black"
+                                android:textSize="23sp" />
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="#0D000000"/>
+                            <TextView
+                                android:paddingBottom="8dp"
+                                android:paddingTop="8dp"
+                                android:id="@+id/fine_arts_event2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/button_bg"
+                                android:gravity="center"
+                                android:clickable="true"
+                                android:text="Event 2"
+                                android:textColor="@android:color/black"
+                                android:textSize="23sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </FrameLayout>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginBottom="10dp"
-                        android:gravity="center_horizontal"
-                        android:text="Sports Events"
-                        android:textColor="@android:color/black"
-                        android:textSize="28sp" />
-                </RelativeLayout>
-            </LinearLayout>
+            <!--Ends Here-->
 
-            <LinearLayout
-                android:id="@+id/theatre"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:background="#FF2196F3">
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_margin="8dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/theatre" />
-
-                    <TextView
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#FEFEFE"
+                    app:cardCornerRadius="0dp"
+                    android:elevation="10dp">
+                    <LinearLayout
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginBottom="10dp"
-                        android:gravity="center_horizontal"
-                        android:text="Theatre Events"
-                        android:textColor="@android:color/white"
-                        android:textSize="28sp" />
-                </RelativeLayout>
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:id="@+id/fun"
+                            android:layout_width="match_parent"
+                            android:layout_height="170dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/fun"
+                                android:scaleType="fitXY"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:hapticFeedbackEnabled="true"
+                                android:background="#80000000"
+                                android:gravity="center"
+                                android:text="Fun"
+                                android:textColor="@android:color/white"
+                                android:textSize="30sp" />
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/theatre_event1"
+
+                        </RelativeLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/fun_event1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:background="@drawable/button_bg"
+                                android:gravity="center"
+                                android:text="Event 1"
+                                android:paddingBottom="8dp"
+                                android:paddingTop="8dp"
+                                android:textColor="@android:color/black"
+                                android:textSize="23sp" />
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="#0D000000"/>
+                            <TextView
+                                android:paddingBottom="8dp"
+                                android:paddingTop="8dp"
+                                android:id="@+id/fun_event2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/button_bg"
+                                android:gravity="center"
+                                android:clickable="true"
+                                android:text="Event 2"
+                                android:textColor="@android:color/black"
+                                android:textSize="23sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </FrameLayout>
+
+
+            <!--Ends here-->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#FEFEFE"
+                    app:cardCornerRadius="0dp"
+                    android:elevation="10dp">
+                    <LinearLayout
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
-                        android:gravity="center"
-                        android:text="Event 1"
-                        android:textColor="@android:color/black"
-                        android:textSize="23sp" />
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:id="@+id/sports"
+                            android:layout_width="match_parent"
+                            android:layout_height="170dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/sports"
+                                android:scaleType="fitXY"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:hapticFeedbackEnabled="true"
+                                android:background="#80000000"
+                                android:gravity="center"
+                                android:text="Sports"
+                                android:textColor="@android:color/white"
+                                android:textSize="30sp" />
 
-                    <TextView
-                        android:id="@+id/theatre_event2"
+
+
+                        </RelativeLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/sports_event1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:background="@drawable/button_bg"
+                                android:gravity="center"
+                                android:text="Event 1"
+                                android:paddingBottom="8dp"
+                                android:paddingTop="8dp"
+                                android:textColor="@android:color/black"
+                                android:textSize="23sp" />
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="#0D000000"/>
+                            <TextView
+                                android:paddingBottom="8dp"
+                                android:paddingTop="8dp"
+                                android:id="@+id/sports_event2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/button_bg"
+                                android:gravity="center"
+                                android:clickable="true"
+                                android:text="Event 2"
+                                android:textColor="@android:color/black"
+                                android:textSize="23sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </FrameLayout>
+
+            <!--Ends here-->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#FEFEFE"
+                    app:cardCornerRadius="0dp"
+                    android:elevation="10dp">
+                    <LinearLayout
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
-                        android:gravity="center"
-                        android:text="Event 2"
-                        android:textColor="@android:color/black"
-                        android:textSize="23sp" />
-                </LinearLayout>
-            </LinearLayout>
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:id="@+id/theatre"
+                            android:layout_width="match_parent"
+                            android:layout_height="170dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/theatre"
+                                android:scaleType="fitXY"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:hapticFeedbackEnabled="true"
+                                android:background="#80000000"
+                                android:gravity="center"
+                                android:text="Theatre"
+                                android:textColor="@android:color/white"
+                                android:textSize="30sp" />
+
+
+
+                        </RelativeLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/theatre_event1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:background="@drawable/button_bg"
+                                android:gravity="center"
+                                android:text="Event 1"
+                                android:paddingBottom="8dp"
+                                android:paddingTop="8dp"
+                                android:textColor="@android:color/black"
+                                android:textSize="23sp" />
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="#0D000000"/>
+                            <TextView
+                                android:paddingBottom="8dp"
+                                android:paddingTop="8dp"
+                                android:id="@+id/theatre_event2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/button_bg"
+                                android:gravity="center"
+                                android:clickable="true"
+                                android:text="Event 2"
+                                android:textColor="@android:color/black"
+                                android:textSize="23sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </FrameLayout>
         </LinearLayout>
     </ScrollView>
  <LinearLayout
