@@ -8,13 +8,18 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Layout;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
+
+import com.amulyakhare.textdrawable.TextDrawable;
+import com.amulyakhare.textdrawable.util.ColorGenerator;
 
 import java.util.ArrayList;
 
@@ -33,11 +38,19 @@ public class MainActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
+        ((ImageView) findViewById(R.id.techimgv)).setBackground(TextDrawable.builder().buildRect(String.valueOf("Technical".charAt(0)), ColorGenerator.MATERIAL.getRandomColor()));
+        ((ImageView) findViewById(R.id.cultimgv)).setBackground(TextDrawable.builder().buildRect(String.valueOf("Cultural".charAt(0)), ColorGenerator.MATERIAL.getRandomColor()));
+        ((ImageView) findViewById(R.id.theaimgv)).setBackground(TextDrawable.builder().buildRect(String.valueOf("Theatre".charAt(0)), ColorGenerator.MATERIAL.getRandomColor()));
+        ((ImageView) findViewById(R.id.liteimgv)).setBackground(TextDrawable.builder().buildRect(String.valueOf("Literature".charAt(0)), ColorGenerator.MATERIAL.getRandomColor()));
+        ((ImageView) findViewById(R.id.funimgv)).setBackground(TextDrawable.builder().buildRect(String.valueOf("Fun".charAt(0)), ColorGenerator.MATERIAL.getRandomColor()));
+        ((ImageView) findViewById(R.id.sporimgv)).setBackground(TextDrawable.builder().buildRect(String.valueOf("Sports".charAt(0)), ColorGenerator.MATERIAL.getRandomColor()));
+        ((ImageView) findViewById(R.id.fineimgv)).setBackground(TextDrawable.builder().buildRect(String.valueOf("F A"), ColorGenerator.MATERIAL.getRandomColor()));
+
         /*NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);*/
 
 
-        RelativeLayout technical = (RelativeLayout) findViewById(R.id.technical);
+        LinearLayout technical = (LinearLayout) findViewById(R.id.technical);
         technical.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,7 +58,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        RelativeLayout cultural = (RelativeLayout) findViewById(R.id.cultural);
+        LinearLayout cultural = (LinearLayout) findViewById(R.id.cultural);
         cultural.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
