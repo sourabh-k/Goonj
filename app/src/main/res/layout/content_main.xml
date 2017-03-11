@@ -47,6 +47,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content">
             <android.support.v7.widget.CardView
+                android:id="@+id/cvtechnical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -81,6 +82,56 @@
                         android:layout_margin="3dp"/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvtechnical2"
+                    android:layout_width="match_parent"
+                    android:layout_height="182dp"
+                    android:layout_margin="10dp"
+                    android:background="#FEFEFE"
+                    app:cardCornerRadius="0dp"
+                    android:elevation="10dp"
+                    android:visibility="gone">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/technical_event1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:background="@drawable/button_bg"
+                            android:gravity="center"
+                            android:text="Event 1"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@android:color/black"
+                            android:textSize="23sp" />
+
+                        <TextView
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:id="@+id/technical_event2"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_bg"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:text="Event 2"
+                            android:textColor="@android:color/black"
+                            android:textSize="23sp" />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:id="@+id/backtech"
+                            android:src="@drawable/back"
+                            android:background="#000000"
+                            android:scaleType="fitCenter"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
             </FrameLayout>
 
             <!--Ends here-->
