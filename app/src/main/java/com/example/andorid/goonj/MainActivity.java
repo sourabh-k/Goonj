@@ -38,13 +38,13 @@ public class MainActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        ((ImageView) findViewById(R.id.techimgv)).setBackground(TextDrawable.builder().buildRect(String.valueOf("Technical".charAt(0)), ColorGenerator.MATERIAL.getRandomColor()));
-        ((ImageView) findViewById(R.id.cultimgv)).setBackground(TextDrawable.builder().buildRect(String.valueOf("Cultural".charAt(0)), ColorGenerator.MATERIAL.getRandomColor()));
-        ((ImageView) findViewById(R.id.theaimgv)).setBackground(TextDrawable.builder().buildRect(String.valueOf("Theatre".charAt(0)), ColorGenerator.MATERIAL.getRandomColor()));
-        ((ImageView) findViewById(R.id.liteimgv)).setBackground(TextDrawable.builder().buildRect(String.valueOf("Literature".charAt(0)), ColorGenerator.MATERIAL.getRandomColor()));
-        ((ImageView) findViewById(R.id.funimgv)).setBackground(TextDrawable.builder().buildRect(String.valueOf("Fun".charAt(0)), ColorGenerator.MATERIAL.getRandomColor()));
-        ((ImageView) findViewById(R.id.sporimgv)).setBackground(TextDrawable.builder().buildRect(String.valueOf("Sports".charAt(0)), ColorGenerator.MATERIAL.getRandomColor()));
-        ((ImageView) findViewById(R.id.fineimgv)).setBackground(TextDrawable.builder().buildRect(String.valueOf("F A"), ColorGenerator.MATERIAL.getRandomColor()));
+        findViewById(R.id.techimgv).setBackground(TextDrawable.builder().buildRect(String.valueOf("Technical".charAt(0)), ColorGenerator.MATERIAL.getRandomColor()));
+        findViewById(R.id.cultimgv).setBackground(TextDrawable.builder().buildRect(String.valueOf("Cultural".charAt(0)), ColorGenerator.MATERIAL.getRandomColor()));
+        findViewById(R.id.theaimgv).setBackground(TextDrawable.builder().buildRect(String.valueOf("Theatre".charAt(0)), ColorGenerator.MATERIAL.getRandomColor()));
+        findViewById(R.id.liteimgv).setBackground(TextDrawable.builder().buildRect(String.valueOf("Literature".charAt(0)), ColorGenerator.MATERIAL.getRandomColor()));
+        findViewById(R.id.funimgv).setBackground(TextDrawable.builder().buildRect(String.valueOf("Fun".charAt(0)), ColorGenerator.MATERIAL.getRandomColor()));
+        findViewById(R.id.sporimgv).setBackground(TextDrawable.builder().buildRect(String.valueOf("Sports".charAt(0)), ColorGenerator.MATERIAL.getRandomColor()));
+        findViewById(R.id.fineimgv).setBackground(TextDrawable.builder().buildRect(String.valueOf("FA"), ColorGenerator.MATERIAL.getRandomColor()));
 
         /*NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);*/

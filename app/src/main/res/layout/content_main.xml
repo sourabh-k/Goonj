@@ -22,13 +22,19 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/goonj2"
+                android:scaleType="fitCenter"
+                android:background="#fffdfd"/>
             <TextView
                 android:id="@+id/title"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:background="#800000FF"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"
                 android:text="Events"
-                android:textSize="35sp"
+                android:textSize="30sp"
                 android:gravity="center"
                 android:textColor="@android:color/white"/>
             <LinearLayout
@@ -70,7 +76,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Technical"
-                        android:textSize="25sp"
+                        android:textSize="22sp"
                         android:gravity="center"
                         android:layout_margin="3dp"/>
                 </LinearLayout>
@@ -109,7 +115,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Cultural"
-                            android:textSize="25sp"
+                            android:textSize="22sp"
                             android:layout_margin="3dp"
                             android:gravity="center"/>
                     </LinearLayout>
@@ -152,7 +158,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Literature"
-                            android:textSize="25sp"
+                            android:textSize="22sp"
                             android:layout_margin="3dp"
                             android:gravity="center"/>
                     </LinearLayout>
@@ -191,7 +197,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Theatre"
-                            android:textSize="25sp"
+                            android:textSize="22sp"
                             android:gravity="center"
                             android:layout_margin="3dp"/>
                     </LinearLayout>
@@ -236,7 +242,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Fun"
-                                android:textSize="25sp"
+                                android:textSize="22sp"
                                 android:gravity="center"
                                 android:layout_margin="3dp"/>
                     </LinearLayout>
@@ -276,7 +282,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Sports"
-                            android:textSize="25sp"
+                            android:textSize="22sp"
                             android:gravity="center"
                             android:layout_margin="3dp"/>
                     </LinearLayout>
@@ -312,7 +318,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Fine Arts"
-                            android:textSize="25sp"
+                            android:textSize="22sp"
                             android:gravity="center"
                             android:layout_margin="3dp"/>
                     </LinearLayout>
